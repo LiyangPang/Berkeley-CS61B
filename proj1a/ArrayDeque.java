@@ -33,11 +33,11 @@ public class ArrayDeque<T>{
 			resize(size*2);
 		}
 
-		else{
+		
 			items[nextLast] = item;
 			size += 1;
 			nextLast = plusOne(nextLast);
-		}
+		
 	}
 
 
