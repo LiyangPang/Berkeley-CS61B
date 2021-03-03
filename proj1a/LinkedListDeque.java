@@ -129,7 +129,7 @@ public class LinkedListDeque<T>{
 			return sentinel.next;
 		}
 		else{
-			n = getRecursivehelper(index - 1);
+			Node n = getRecursivehelper(index - 1);
 			n = n.next;
 			return n;
 		}
