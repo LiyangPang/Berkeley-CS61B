@@ -104,7 +104,7 @@ public class LinkedListDeque<T>{
 	}
 
 	public T get(int index){
-		if (index > size -1){
+		if (index > size -1|| index <0){
 			return null;
 		}
 
@@ -116,4 +116,24 @@ public class LinkedListDeque<T>{
 
 	}
 
+	public T getRecursive(int index ){
+		return getRecursivehelper(index).item;
+	}
+
+	public Node getRecursivehelper(int index){
+		if (index > size -1|| index <0){
+			return null;
+		}
+
+		if (index == 0){
+			return sentinel.next;
+		}
+		else{
+			n = getRecursivehelper(index - 1);
+			n = n.next;
+			return n;
+		}
+
+
+	}
 }
