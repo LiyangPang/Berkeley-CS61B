@@ -78,7 +78,7 @@ public class LinkedListDeque<T>{
 
 	public T removeFirst(){
 		if(size == 0){
-			return null
+			return null;
 		}
 		Node r = sentinel.next;
 		T r_v = r.item;
@@ -100,7 +100,7 @@ public class LinkedListDeque<T>{
 
 	public T removeLast(){
 		if(size == 0){
-			return null
+			return null;
 		}
 		Node r = end;
 		T r_v = r.item;
