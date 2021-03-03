@@ -19,11 +19,11 @@ public class ArrayDeque<T>{
 			resize(size*2);
 		}
 
-		else{
+		
 			items[nextFirst] = item;
 			size += 1;
 			nextFirst = minusOne(nextFirst);
-		}
+		
 
 		
 	}
@@ -107,14 +107,14 @@ public class ArrayDeque<T>{
 			return null;
 		}
 		else{
-			System.out.println(items[(index+nextFirst+1)%items.length]);
+			
 			return items[(index+nextFirst+1)%items.length];
 		}
 	}
 
 
 
-	public void resize(int cap){
+	private void resize(int cap){
 		T[]a = (T[])new Object[cap];
 		if(nextLast == plusOne(nextFirst)){
 			System.arraycopy(items,plusOne(nextFirst),a,1,items.length-plusOne(nextFirst));
@@ -138,7 +138,7 @@ public class ArrayDeque<T>{
 	}
 
 
-	public int minusOne(int index){
+	private int minusOne(int index){
 		if (index!=0){
 			return index -1;
 		}
@@ -147,7 +147,7 @@ public class ArrayDeque<T>{
 		}
 	}
 
-	public int plusOne(int index){
+	private int plusOne(int index){
 		if (index == items.length -1){
 			return 0;
 		}
